@@ -1,12 +1,18 @@
 {
   "name": "typescript-demo",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "build": "./node_modules/.bin/tsc --project ./tsconfig.json",
+    "dev": "nodemon ./src/index.ts"
+  },
   "repository": "git@github.com:panachainy/typescript-demo.git",
   "author": "Panachai <panachai.ny@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^16.11.6",
+    "nodemon": "^2.0.14",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
   },
